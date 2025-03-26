@@ -13,12 +13,10 @@
         <div class="container">
             <h1>Research Project</h1>
             <nav>
-                <ul>
                     <button onclick="scrollToSection('home')">Home</button>
                     <button onclick="scrollToSection('about')">About</button>
                     <button onclick="scrollToSection('private-investigator')">Private Investigator</button>
                     <button onclick="scrollToSection('contact')">Contact</button>
-                </ul>
             </nav>
         </div>
     </header>
@@ -32,86 +30,251 @@
     </section>
     
     <section id="about" class="content-section">
-        <div class="container">
+        <div class="about-container">
             <h2>About the Project</h2>
-            <p>This project provides a comprehensive breakdown of the BERT paper, "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding," authored by Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova at Google AI. The project aims to analyze BERT's methodology, historical context, and real-world applications through an illustrated and interactive blog.</p>
-            <p>BERT revolutionized NLP by introducing a bidirectional transformer-based model that understands the full context of words in a sentence, leading to significant improvements in various NLP tasks. This project will delve into the details of BERT’s architecture, including its masked language model (MLM) and next sentence prediction (NSP) techniques.</p>
-            <p>The blog will be structured into multiple sections, each playing a unique role in breaking down the paper. It will include visual explanations of BERT's model structure, a historical overview of transformer models leading up to BERT, an investigative look into the authors' motivations, and a NeurIPS-style review assessing the strengths and limitations of the paper.</p>
-            <p>Additionally, a programming demonstration will showcase BERT’s real-world applications, illustrating how it can be fine-tuned for tasks like sentiment analysis, question-answering, and text classification. By combining research analysis with interactive visualizations, this project aims to make the complexities of BERT accessible to a wider audience.</p>
-        </div>
-    </section>
+            <p class="about-text">
+                This project provides a comprehensive breakdown of the BERT paper, 
+                <strong>"BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding,"</strong> 
+                authored by Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova at Google AI. 
+                The project aims to analyze BERT's methodology, historical context, and real-world applications 
+                through an illustrated and interactive blog. BERT revolutionized NLP by introducing a bidirectional 
+                transformer-based model that understands the full context of words in a sentence, leading to significant 
+                improvements in various NLP tasks. This project will delve into the details of BERT’s architecture, 
+                including its masked language model (MLM) and next sentence prediction (NSP) techniques. 
+                The blog will be structured into multiple sections, each playing a unique role in breaking down 
+                the paper. It will include visual explanations of BERT's model structure, a historical overview of 
+                transformer models leading up to BERT, an investigative look into the authors' motivations, and a 
+                NeurIPS-style review assessing the strengths and limitations of the paper. Additionally, a programming 
+                demonstration will showcase BERT’s real-world applications, illustrating how it can be fine-tuned for 
+                tasks like sentiment analysis, question-answering, and text classification. By combining research 
+                analysis with interactive visualizations, this project aims to make the complexities of BERT accessible 
+                to a wider audience.
+            </p>
+            <div class="bert-animation">
+                <p class="sentence">"BERT understands natural language."</p>
+                <div class="tokenized">
+                    <span class="token">[CLS]</span>
+                    <span class="token">BERT</span>
+                    <span class="token">understands</span>
+                    <span class="token">natural</span>
+                    <span class="token">language</span>
+                    <span class="token">[SEP]</span>
+                </div>
     
-    <section id="private-investigator" class="content-section">
-        <div class="container">
-            <h2>Private Investigator Report</h2>
-            <div class="authors">
-                <div class="author">
-                    <img src="jacob_devlin.jpg" alt="Jacob Devlin">
-                    <h3>Jacob Devlin</h3>
-                    <p>Jacob Devlin is a principal research scientist at Google AI and the lead author of the BERT paper. His work focuses on deep learning and natural language processing, with contributions to machine translation and language understanding.</p>
+                <div class="attention-arrows">
+                    <span class="arrow" id="arrow1">↔</span>
+                    <span class="arrow" id="arrow2">↔</span>
+                    <span class="arrow" id="arrow3">↔</span>
+                    <span class="arrow" id="arrow4">↔</span>
                 </div>
-                <div class="author">
-                    <img src="images/anime_gan_p.png" alt="Ming-Wei Chang">
-                    <h3>Ming-Wei Chang</h3>
-                    <p>Ming-Wei Chang is a senior research scientist specializing in transfer learning and multi-task learning for NLP. His work ensures that models like BERT generalize well across different tasks.</p>
-                </div>
-                <div class="author">
-                    <img src="images/photo.jpg.png" alt="Kenton Lee">
-                    <h3>Kenton Lee</h3>
-                    <p>Kenton Lee’s research focuses on coreference resolution and semantic parsing, contributing to BERT’s architecture and methodology. His work helps improve contextual language understanding.</p>
-                </div>
-                <div class="author">
-                    <img src="images/kristina4.jpg" alt="Kristina Toutanova">
-                    <h3>Kristina Toutanova</h3>
-                    <p>Kristina Toutanova is a principal research scientist at Google AI. She specializes in linguistics and deep learning, bridging the gap between rule-based NLP approaches and modern neural network models.</p>
+    
+                <div class="bert-output">
+                    <span class="output">[CLS]</span>
+                    <span class="output">BERT*</span>
+                    <span class="output">understands*</span>
+                    <span class="output">natural*</span>
+                    <span class="output">language*</span>
+                    <span class="output">[SEP]</span>
                 </div>
             </div>
-            <p>The research paper "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding" was authored by Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova, all researchers at Google AI. Their motivation stemmed from the limitations of previous NLP models, which were primarily unidirectional and struggled with understanding the full context of language.</p>
-            <p>Jacob Devlin, the lead author, is known for his contributions to deep learning and language models at Google AI. His work focuses on advancing machine learning architectures for NLP applications. Ming-Wei Chang, a senior research scientist, specializes in transfer learning and multi-task learning, ensuring that models like BERT generalize well across different NLP tasks. Kenton Lee’s research focuses on coreference resolution and semantic parsing, contributing to BERT’s architecture and methodology. Kristina Toutanova is an expert in linguistics and deep learning, bridging the gap between rule-based NLP approaches and modern deep learning techniques.</p>
-            <p>Their collective motivation was to create a model that leveraged bidirectional training to understand context better than previous models. BERT introduced the innovative masked language model (MLM) and next sentence prediction (NSP) techniques, enabling it to outperform prior state-of-the-art models on various NLP benchmarks.</p>
-            <p>In summary, BERT was developed to address the inefficiencies of existing NLP models by using deep bidirectional transformers. This breakthrough not only improved the performance of NLP tasks but also set a new standard for language models, leading to widespread adoption in the AI community.</p>
         </div>
     </section>
     
+
+    <section id="private-investigator" class="private-investigator-section">
+    <div class="container">
+        <h2>Private Investigator Report</h2>
+        <div class="authors">
+            <div class="author-card">
+                <img src="images/Jacob.jpeg" alt="Jacob Devlin">
+                <h3>Jacob Devlin</h3>
+                <p>Jacob Devlin is a principal research scientist at Google AI and the lead author of the BERT paper. His work focuses on deep learning and natural language processing.</p>
+            </div>
+
+            <div class="author-card">
+                <img src="images/anime_gan_p.png" alt="Ming-Wei Chang">
+                <h3>Ming-Wei Chang</h3>
+                <p>Ming-Wei Chang is a senior research scientist specializing in transfer learning and multi-task learning for NLP. His work ensures that models like BERT generalize well across different tasks.</p>
+            </div>
+
+            <div class="author-card">
+                <img src="images/photo.jpg.png" alt="Kenton Lee">
+                <h3>Kenton Lee</h3>
+                <p>Kenton Lee’s research focuses on coreference resolution and semantic parsing, contributing to BERT’s architecture and methodology.</p>
+            </div>
+
+            <div class="author-card">
+                <img src="images/kristina4.jpg" alt="Kristina Toutanova">
+                <h3>Kristina Toutanova</h3>
+                <p>Kristina Toutanova specializes in linguistics and deep learning, bridging the gap between rule-based NLP approaches and modern neural network models.</p>
+            </div>
+        </div>
+    </div>
     </section>
 
-    <section id="future-research" class="content-section">
-        <div class="container">
-            <h2>Future Research Directions</h2>
+    
+    <!-- 🏺 ARCHAEOLOGIST Timeline Section: Evolution of NLP -->
+    <section id="archaeologist" class="timeline-section">
+    <div class="container">
+      <h2 class="section-title">🕵️ Archaeologist: Unearthing the Road to BERT</h2>
+      <div class="timeline">
+  
+        <!-- Era 1 -->
+        <div class="timeline-step">
+          <div class="dot"></div>
+          <div class="content">
+            <h3>🪨 Prehistoric Era of NLP: Rule-Based Systems</h3>
+            <ul>
+              <li>Used handcrafted grammar/syntax rules.</li>
+              <li>Struggled to generalize across domains.</li>
+              <li>Couldn’t learn — everything was hardcoded.</li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Era 2 -->
+        <div class="timeline-step">
+          <div class="dot"></div>
+          <div class="content">
+            <h3>📊 Statistical Age (1990s–early 2010s)</h3>
+            <ul>
+              <li><strong>N-gram models:</strong> Used fixed window contexts (e.g., bigrams).</li>
+              <li><strong>Word embeddings:</strong> Word2Vec (2013), GloVe (2014).</li>
+              <li>Vectors were <em>static</em> — “bank” meant the same in every context.</li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Era 3 -->
+        <div class="timeline-step">
+          <div class="dot"></div>
+          <div class="content">
+            <h3>🧠 Deep Learning Boom</h3>
+            <ul>
+              <li><strong>LSTMs/GRUs:</strong> Captured sequence info, but slow & hard to scale.</li>
+              <li><strong>Transformers (2017):</strong> “Attention is All You Need” changed everything — parallel, scalable, context-rich.</li>
+              <li><strong>ELMo (2018):</strong> Brought contextual embeddings using bidirectional LSTMs.</li>
+              <li><strong>GPT (2018):</strong> First Transformer-based model with left-to-right training.</li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Era 4 -->
+        <div class="timeline-step">
+          <div class="dot"></div>
+          <div class="content">
+            <h3>🚀 BERT (2018)</h3>
+            <ul>
+              <li><strong>Masked Language Modeling (MLM):</strong> Learn from both left and right context.</li>
+              <li><strong>Next Sentence Prediction (NSP):</strong> Learn relationships between sentences.</li>
+              <li>Set new <strong>SOTA</strong> on 11 NLP benchmarks.</li>
+              <li>Enabled plug-and-play fine-tuning across NLP tasks.</li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Summary -->
+        <div class="timeline-summary">
+          <p>
+            BERT was the result of decades of progress — from rule-based systems to statistical models to deep learning.
+            It introduced the pretraining + fine-tuning paradigm that powers today’s NLP giants like RoBERTa, ALBERT, DistilBERT, and even GPT models.
+          </p>
+        </div>
+      </div>
+    </div>
+    </section>
+  
 
-            <div class="flowchart-wrapper">
-                <div class="flowchart">
-                    <div class="node main-node">Hover Over!</div>
-                    <div class="node-container">
-                        <div class="node sub-node" onmouseover="showVideo('video1')" onmouseout="hideVideo('video1')">Expanding Context Window</div>
-                        <div class="node sub-node" onmouseover="showVideo('video2')" onmouseout="hideVideo('video2')">Multimodal BERT</div>
-                        <div class="node sub-node" onmouseover="showVideo('video3')" onmouseout="hideVideo('video3')">Memory-Efficient Variants</div>
-                        <div class="node sub-node" onmouseover="showVideo('video4')" onmouseout="hideVideo('video4')">Cross-Language Adaptability</div>
-                        <div class="node sub-node" onmouseover="showVideo('video5')" onmouseout="hideVideo('video5')">Ethical & Interpretability Studies</div>
+    <section id="future-research" class="future-research-section">
+    <div class="container">
+            <h2 class="section-title">Future Research Directions</h2>
+            
+            <div class="future-research-wrapper">
+                <!-- Flowchart Box -->
+                <div class="flowchart-wrapper">
+                    <div class="flowchart">
+                        <div class="main-node">Hover Over!</div>
+                        <div class="node-container">
+                            <button class="sub-node" onmouseover="showVideo('video1')" onmouseout="hideVideo('video1')">Expanding Context Window</button>
+                            <button class="sub-node" onmouseover="showVideo('video2')" onmouseout="hideVideo('video2')">Multimodal BERT</button>
+                            <button class="sub-node" onmouseover="showVideo('video3')" onmouseout="hideVideo('video3')">Memory-Efficient Variants</button>
+                            <button class="sub-node" onmouseover="showVideo('video4')" onmouseout="hideVideo('video4')">Cross-Language Adaptability</button>
+                            <button class="sub-node" onmouseover="showVideo('video5')" onmouseout="hideVideo('video5')">Ethical & Interpretability Studies</button>
+                        </div>
                     </div>
                 </div>
+    
+                <!-- Video display next to Flowchart -->
+                <div class="video-container">
+                    <video id="video1" class="hover-video" src="expanding_context.mp4" muted loop></video>
+                    <video id="video2" class="hover-video" src="multimodal_bert.mp4" muted loop></video>
+                    <video id="video3" class="hover-video" src="memory_efficient.mp4" muted loop></video>
+                    <video id="video4" class="hover-video" src="cross_language.mp4" muted loop></video>
+                    <video id="video5" class="hover-video" src="ethical_interpretability.mp4" muted loop></video>
+                </div>
             </div>
-            
-            <div class="video-container">
-                <video id="video1" class="hover-video" src="expanding_context.mp4" muted loop></video>
-                <video id="video2" class="hover-video" src="multimodal_bert.mp4" muted loop></video>
-                <video id="video3" class="hover-video" src="memory_efficient.mp4" muted loop></video>
-                <video id="video4" class="hover-video" src="cross_language.mp4" muted loop></video>
-                <video id="video5" class="hover-video" src="ethical_interpretability.mp4" muted loop></video>
-            </div>
-            
-            
+    
+            <!-- Research Text Below Yellow Box -->
             <div class="research-text">
                 <p><strong>Expanding BERT's Context Window:</strong> While BERT is effective at understanding sentence-level context, future research could explore expanding its context window to handle entire documents. A modified model could incorporate hierarchical attention mechanisms to capture broader textual dependencies.</p>
+    
                 <p><strong>Multimodal BERT:</strong> An exciting avenue of research would be extending BERT into multimodal learning, integrating text with vision and audio. A "VisualBERT" or "Multimodal-BERT" could be trained to jointly understand text and images for applications in automated video summarization, image captioning, and human-computer interaction.</p>
+    
                 <p><strong>Memory-Efficient BERT Variants:</strong> While BERT delivers state-of-the-art results, its computational cost remains a challenge. Research could focus on developing efficient variants of BERT using model pruning, distillation, and quantization techniques to make deployment feasible on edge devices and mobile applications.</p>
+    
                 <p><strong>Cross-Language Adaptability:</strong> Current multilingual BERT models still struggle with zero-shot language understanding in low-resource languages. Future work could focus on improving BERT’s transfer learning capabilities by incorporating meta-learning techniques or unsupervised domain adaptation.</p>
+    
                 <p><strong>Ethical and Interpretability Studies:</strong> As BERT is increasingly used in real-world applications, understanding its biases and decision-making processes is critical. Future research could explore ways to enhance interpretability and develop fairness-aware training methods to mitigate unintended biases.</p>
+    
                 <p>By addressing these research challenges, future iterations of BERT could become more efficient, adaptable, and versatile, paving the way for broader AI applications in healthcare, education, and creative industries.</p>
             </div>
-            
-            
+    
+    </div>
     </section>
+
+    <section id="reviewers" class="review-section">
+        <div class="container">
+          <h2 class="section-title"> Reviewer Panel</h2>
+          <div class="review-score">
+            <h3> Overall Score: <span class="score">8/10</span></h3>
+            <p class="score-justification">Groundbreaking work with long-lasting impact on NLP. Minor limitations in interpretability and efficiency, but overall a solid, well-executed contribution to the field.</p>
+          </div>
+      
+          <div class="review-card strength">
+            <h3> Strengths</h3>
+            <ul>
+              <li>Introduced a novel bidirectional transformer architecture for pre-training language models.</li>
+              <li>Significant improvement across 11 NLP tasks including GLUE, SQuAD, and SWAG.</li>
+              <li>Effectively leverages Masked Language Modeling and Next Sentence Prediction tasks.</li>
+              <li>Open-sourced model and code, enhancing reproducibility and community adoption.</li>
+            </ul>
+          </div>
+      
+          <div class="review-card weakness">
+            <h3> Weaknesses</h3>
+            <ul>
+              <li>NSP task is now considered less effective for sentence-level coherence modeling.</li>
+              <li>Heavy computational cost for pre-training (up to 4 days on 64 TPUs).</li>
+              <li>Lack of interpretability and analysis on attention heads or token representation evolution.</li>
+              <li>Limited exploration of multilingual or low-resource languages in initial release.</li>
+            </ul>
+          </div>
+      
+          <div class="review-card suggestions">
+            <h3> Suggestions for Improvement</h3>
+            <ul>
+              <li>Replace NSP with more effective objectives like Sentence Order Prediction (SOP).</li>
+              <li>Incorporate better interpretability tools or analysis of learned representations.</li>
+              <li>Explore multilingual and domain-adapted pre-training setups.</li>
+              <li>Optimize BERT for smaller models (already explored later by DistilBERT, TinyBERT).</li>
+            </ul>
+          </div>
+      
+          
+        </div>
+      </section>
+      
+
     
     <section id="contact" class="content-section">
         <div class="container">

@@ -1,137 +1,547 @@
-/* CSS: styles.css */
+/* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     color: #333;
 }
+
+/* Header Styles */
 header {
     background: #222;
     color: white;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+/* Container for layout */
 .container {
+    display: block;
     width: 80%;
     margin: auto;
-    padding: 20px;
+    padding: 0 20px;
 }
-nav ul {
-    list-style: none;
-    padding: 0;
+
+/* Styling for the title */
+h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+/* Navigation Styles */
+nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+
 }
-nav ul li {
-    margin: 0 10px;
-}
-nav ul li button {
+
+/* Button styling in the nav */
+nav button {
     background: transparent;
     color: white;
-    border: 2px solid white;
-    padding: 10px 15px;
+    border: none;
+    padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
-    transition: all 0.3s ease;
-    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 20px;
+    margin-left: 20px;
 }
-nav ul li button:hover {
-    background: white;
+
+nav button:hover, nav button:focus {
+    background-color: #f0f0f0;
     color: #222;
 }
-.authors {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-.author {
-    width: 22%;
-    background: white;
-    padding: 20px;
+
+/* Hero Section Customization */
+.hero {
+    background: linear-gradient(to right, #ffcc00, #ff6600);
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 50px 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h2 {
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.hero p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.hero button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    background: transparent;
+    color: white;
+}
+
+.hero button:hover {
+    background-color: white;
+    color: #222;
+}
+
+
+/* About Section Styling */
+.about-container {
+    width: 100%;
+    background: white;
+    padding: 60px 10%;
+    box-sizing: border-box;
+}
+
+.about-container h2 {
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: 600;
     margin-bottom: 20px;
 }
-.author img {
+
+.about-text {
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Private Investigator Report Section */
+.private-investigator-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.private-investigator-section .container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.private-investigator-section h2 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* Flexbox Grid for Author Cards */
+.authors {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between the cards */
+}
+
+/* Author Card Styling */
+.author-card {
+    background: white;
+    width: 280px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.author-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Author Image Styling */
+.author-card img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin-bottom: 10px;
+    object-fit: cover;
 }
-.hero {
-    background: linear-gradient(to right, #ffcc00, #ff6600);
-    text-align: center;
-    padding: 100px 0;
-    color: white;
+
+/* Author Name */
+.author-card h3 {
     font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
-.content-section {
-    padding: 50px 0;
-    text-align: left;
-    background: white;
+
+/* Author Description */
+.author-card p {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Future Research Section */
+.future-research-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
     margin-bottom: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* Align Flowchart and Video Side by Side */
+.future-research-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Flowchart Box */
 .flowchart-wrapper {
     background-color: #FFD700;
     padding: 20px;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    width: 35%;
 }
-.flowchart {
+.main-node{
     text-align: center;
 }
-.node {
-    display: inline-block;
-    padding: 15px 20px;
-    border-radius: 10px;
-    color: white;
-    font-weight: bold;
-    margin: 10px;
-    cursor: pointer;
-}
-.main-node {
-    background-color: #FFD700;
-    font-size: 18px;
-    padding: 20px;
-}
+
+/* Nodes in Flowchart */
 .node-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.sub-node {
-    background-color: #87CEEB;
-    font-size: 14px;
-    transition: background 0.3s;
-    padding: 10px 15px;
-}
-.sub-node:hover {
-    background-color: #4682B4;
-}
-.video-container {
-    text-align: center;
+    flex-direction: column;
+    gap: 15px;
     margin-top: 20px;
 }
+
+.sub-node {
+    background-color: #87CEEB;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+}
+
+.sub-node:hover {
+    background-color: #4682B4;
+    color: white;
+}
+
+/* Video Display (Next to Flowchart) */
+.video-container {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .hover-video {
     display: none;
-    width: 400px;
-    height: 250px;
+    width: 100%;
+    max-width: 500px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
-footer {
-    background: #222;
-    color: white;
+
+/* Research Text Below Yellow Box */
+.research-text {
+    width: 80%;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 40px auto 0;
+    text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .future-research-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .flowchart-wrapper, .video-container, .research-text {
+        width: 90%;
+    }
+}
+
+
+/* BERT Animation Section */
+.bert-animation {
     text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
+    margin-top: 40px;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+/* Sentence Styling */
+.sentence {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Tokenized Words */
+.tokenized {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.token {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #ffcc00;
+    border-radius: 8px;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Attention Arrows */
+.attention-arrows {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.arrow {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards 1s;
+}
+
+/* BERT Output */
+.bert-output {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0077b6;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards 2s;
+}
+
+.token, .arrow, .output {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bert-animation {
+        width: 100%;
+    }
+    
+    .tokenized, .bert-output {
+        flex-wrap: wrap;
+    }
+}
+
+/* Authors, Content and Footer Styling */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+
+    nav button {
+        margin-left: 0;
+    }
+
+    .about-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .about-content {
+        font-size: 1em;
+    }
+}
+
+/* 🏺 Archaeologist Timeline Section */
+.timeline-section {
+    background: #fff;
+    padding: 60px 0;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    padding-left: 20px;
+    border-left: 4px solid #ffcc00;
+}
+
+.timeline-step {
+    position: relative;
+    margin: 40px 0;
+    
+}
+
+.timeline-step .content {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    background-color: #fff8e1;
+    border-left: 4px solid #ffa500;
+}
+
+.timeline-step .content h3 {
+    margin-top: 0;
+    color: #222;
+    font-weight: 600;
+}
+
+.timeline-step .content ul {
+    margin: 10px 0 0 20px;
+}
+
+.timeline-step .content ul li {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.timeline-summary {
+    margin-top: 60px;
+    padding: 20px;
+    background: #fff8e1;
+    border-left: 4px solid #ffa500;
+    border-radius: 8px;
+}
+
+.timeline-summary h3 {
+    margin-top: 0;
+    font-weight: 600;
+    color: #222;
+}
+
+/* ------------------------------
+   🎓 Reviewers Section Styling 
+-------------------------------*/
+.reviewers-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    margin-top: 60px;
+}
+
+.reviewers-section h2 {
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.review-card {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fdfdfd;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 10px;
+    line-height: 1.8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.review-card h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 10px;
+    border-left: 4px solid #ffa500;
+    padding-left: 10px;
+}
+
+.review-card ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.review-card ul li {
+    margin-bottom: 8px;
+    list-style: disc;
+    color: #444;
+}
+
+/* Score Badge */
+.score {
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: #ffa500;
+    color: white;
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 20px;
+    animation: bounceIn 1s ease-in-out;
+}
+
+/* Fun Animation */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
 }
