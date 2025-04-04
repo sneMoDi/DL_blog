@@ -3,15 +3,19 @@ function scrollToSection(id) {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
 }
 
-function showVideo(videoId) {
-    document.getElementById(videoId).style.display = 'block';
-    document.getElementById(videoId).play();
-}
-function hideVideo(videoId) {
-    document.getElementById(videoId).style.display = 'none';
-    document.getElementById(videoId).pause();
-    document.getElementById(videoId).currentTime = 0;
-}
+function toggleMenu() {
+    const nav = document.getElementById('navbar');
+    nav.classList.toggle('show');
+  }
+
+  document.querySelectorAll("#navbar button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const nav = document.getElementById("navbar");
+      if (nav.classList.contains("show")) {
+        nav.classList.remove("show");
+      }
+    });
+  });
 
 document.addEventListener("DOMContentLoaded", function () {
     const tokens = document.querySelectorAll(".token");
@@ -61,3 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }, index * 400);
     });
   });
+
+
+  function showLinks(topicId) {
+    const containers = document.querySelectorAll('.link-container');
+    containers.forEach(div => div.style.display = 'none');
+    document.getElementById(topicId).style.display = 'block';
+  }

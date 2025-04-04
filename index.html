@@ -9,22 +9,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Research Project</h1>
-            <nav>
-                    <button onclick="scrollToSection('home')">Home</button>
-                    <button onclick="scrollToSection('about')">About</button>
-                    <button onclick="scrollToSection('private-investigator')">Private Investigator</button>
-                    <button onclick="scrollToSection('contact')">Contact</button>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="container">
+      <h1>Research Project</h1>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+      <nav id="navbar">
+        <button onclick="scrollToSection('home')">Home</button>
+        <button onclick="scrollToSection('private-investigator')">Private Investigator</button>
+        <button onclick="scrollToSection('archaeologist')">Archaeologist</button>
+        <button onclick="scrollToSection('diagrammer')">Diagrammer</button>
+        <button onclick="scrollToSection('future-research')">Academic Researcher</button>
+        <button onclick="scrollToSection('reviewers')">Reviewers</button>
+        <button onclick="scrollToSection('contact')">Contact</button>
+      </nav>
+    </div>
+  </header>
     
     <section id="home" class="hero">
         <div class="container">
             <h2>Welcome to Our Research</h2>
-            <p>Exploring the depths of knowledge and innovation.</p>
+            <p>Decoding Language with BERT: Where Bidirectionality Meets Understanding.</p>
             <button onclick="scrollToSection('about')">Learn More</button>
         </div>
     </section>
@@ -82,41 +86,56 @@
     
 
     <section id="private-investigator" class="private-investigator-section">
-    <div class="container">
-        <h2>Private Investigator Report</h2>
-        <div class="authors">
-            <div class="author-card">
-                <img src="images/Jacob.jpeg" alt="Jacob Devlin">
-                <h3>Jacob Devlin</h3>
-                <p>Jacob Devlin is a principal research scientist at Google AI and the lead author of the BERT paper. His work focuses on deep learning and natural language processing.</p>
-            </div>
+  <div class="container">
+    <h2>Private Investigator Report</h2>
+    <h4> "BERT wasn’t just built. It was investigated, analyzed, and crafted by minds that knew what the future of NLP needed."</h4>
+    <div class="authors">
 
-            <div class="author-card">
-                <img src="images/anime_gan_p.png" alt="Ming-Wei Chang">
-                <h3>Ming-Wei Chang</h3>
-                <p>Ming-Wei Chang is a senior research scientist specializing in transfer learning and multi-task learning for NLP. His work ensures that models like BERT generalize well across different tasks.</p>
-            </div>
-
-            <div class="author-card">
-                <img src="images/photo.jpg.png" alt="Kenton Lee">
-                <h3>Kenton Lee</h3>
-                <p>Kenton Lee’s research focuses on coreference resolution and semantic parsing, contributing to BERT’s architecture and methodology.</p>
-            </div>
-
-            <div class="author-card">
-                <img src="images/kristina4.jpg" alt="Kristina Toutanova">
-                <h3>Kristina Toutanova</h3>
-                <p>Kristina Toutanova specializes in linguistics and deep learning, bridging the gap between rule-based NLP approaches and modern neural network models.</p>
-            </div>
+      <a href="https://www.linkedin.com/in/jacob-devlin-135ab048/" target="_blank" class="author-link">
+        <div class="author-card">
+          <img src="images/Jacob.jpeg" alt="Jacob Devlin">
+          <h3>Jacob Devlin</h3>
+          <p>Jacob Devlin is a principal research scientist at Google AI and the lead author of the BERT paper. His work focuses on deep learning and natural language processing.</p>
         </div>
+      </a>
+
+      <a href="https://scholar.google.com/citations?user=GiCqMFkAAAAJ&hl=en" target="_blank" class="author-link">
+        <div class="author-card">
+          <img src="images/anime_gan_p.png" alt="Ming-Wei Chang">
+          <h3>Ming-Wei Chang</h3>
+          <p>Ming-Wei Chang is a senior research scientist specializing in transfer learning and multi-task learning for NLP. His work ensures that models like BERT generalize well across different tasks.</p>
+        </div>
+      </a>
+
+      <a href="https://kentonl.com" target="_blank" class="author-link">
+        <div class="author-card">
+          <img src="images/photo.jpg.png" alt="Kenton Lee">
+          <h3>Kenton Lee</h3>
+          <p>Kenton Lee’s research focuses on coreference resolution and semantic parsing, contributing to BERT’s architecture and methodology.</p>
+        </div>
+      </a>
+
+      <a href="http://kristinatoutanova.com" target="_blank" class="author-link">
+        <div class="author-card">
+          <img src="images/kristina4.jpg" alt="Kristina Toutanova">
+          <h3>Kristina Toutanova</h3>
+          <p>Kristina Toutanova specializes in linguistics and deep learning, bridging the gap between rule-based NLP approaches and modern neural network models.</p>
+        </div>
+      </a>
+
     </div>
-    </section>
+  </div>
+</section>
 
     
     <!-- 🏺 ARCHAEOLOGIST Timeline Section: Evolution of NLP -->
     <section id="archaeologist" class="timeline-section">
     <div class="container">
       <h2 class="section-title">🕵️ Archaeologist: Unearthing the Road to BERT</h2>
+      <h4><p>
+        BERT was the result of decades of progress from rule-based systems to statistical models to deep learning.
+        It introduced the pretraining and fine-tuning paradigm that powers today’s NLP giants like RoBERTa, ALBERT, DistilBERT, and even GPT models.
+      </p></h4>
       <div class="timeline">
   
         <!-- Era 1 -->
@@ -127,7 +146,7 @@
             <ul>
               <li>Used handcrafted grammar/syntax rules.</li>
               <li>Struggled to generalize across domains.</li>
-              <li>Couldn’t learn — everything was hardcoded.</li>
+              <li>Couldn’t learn as everything was hardcoded.</li>
             </ul>
           </div>
         </div>
@@ -140,7 +159,7 @@
             <ul>
               <li><strong>N-gram models:</strong> Used fixed window contexts (e.g., bigrams).</li>
               <li><strong>Word embeddings:</strong> Word2Vec (2013), GloVe (2014).</li>
-              <li>Vectors were <em>static</em> — “bank” meant the same in every context.</li>
+              <li>Vectors were static, “bank” meant the same in every context.</li>
             </ul>
           </div>
         </div>
@@ -152,7 +171,7 @@
             <h3>🧠 Deep Learning Boom</h3>
             <ul>
               <li><strong>LSTMs/GRUs:</strong> Captured sequence info, but slow & hard to scale.</li>
-              <li><strong>Transformers (2017):</strong> “Attention is All You Need” changed everything — parallel, scalable, context-rich.</li>
+              <li><strong>Transformers (2017):</strong> “Attention is All You Need” changed everything: parallel, scalable, context-rich.</li>
               <li><strong>ELMo (2018):</strong> Brought contextual embeddings using bidirectional LSTMs.</li>
               <li><strong>GPT (2018):</strong> First Transformer-based model with left-to-right training.</li>
             </ul>
@@ -172,14 +191,7 @@
             </ul>
           </div>
         </div>
-  
-        <!-- Summary -->
-        <div class="timeline-summary">
-          <p>
-            BERT was the result of decades of progress — from rule-based systems to statistical models to deep learning.
-            It introduced the pretraining + fine-tuning paradigm that powers today’s NLP giants like RoBERTa, ALBERT, DistilBERT, and even GPT models.
-          </p>
-        </div>
+    
       </div>
     </div>
     </section>
@@ -188,33 +200,48 @@
     <section id="future-research" class="future-research-section">
     <div class="container">
             <h2 class="section-title">Future Research Directions</h2>
-            
-            <div class="future-research-wrapper">
-                <!-- Flowchart Box -->
-                <div class="flowchart-wrapper">
-                    <div class="flowchart">
-                        <div class="main-node">Hover Over!</div>
-                        <div class="node-container">
-                            <button class="sub-node" onmouseover="showVideo('video1')" onmouseout="hideVideo('video1')">Expanding Context Window</button>
-                            <button class="sub-node" onmouseover="showVideo('video2')" onmouseout="hideVideo('video2')">Multimodal BERT</button>
-                            <button class="sub-node" onmouseover="showVideo('video3')" onmouseout="hideVideo('video3')">Memory-Efficient Variants</button>
-                            <button class="sub-node" onmouseover="showVideo('video4')" onmouseout="hideVideo('video4')">Cross-Language Adaptability</button>
-                            <button class="sub-node" onmouseover="showVideo('video5')" onmouseout="hideVideo('video5')">Ethical & Interpretability Studies</button>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Video display next to Flowchart -->
-                <div class="video-container">
-                    <video id="video1" class="hover-video" src="expanding_context.mp4" muted loop></video>
-                    <video id="video2" class="hover-video" src="multimodal_bert.mp4" muted loop></video>
-                    <video id="video3" class="hover-video" src="memory_efficient.mp4" muted loop></video>
-                    <video id="video4" class="hover-video" src="cross_language.mp4" muted loop></video>
-                    <video id="video5" class="hover-video" src="ethical_interpretability.mp4" muted loop></video>
-                </div>
+
+            <div class="container">
+              <div class="flowchart">
+                <div class="node" onclick="showLinks('context')">Expanding Context</div>
+                <div class="node" onclick="showLinks('multimodal')">Multimodal BERT</div>
+                <div class="node" onclick="showLinks('efficient')">Efficient BERT</div>
+                <div class="node" onclick="showLinks('crosslang')">Cross-Language</div>
+                <div class="node" onclick="showLinks('ethics')">Ethics & Interpretability</div>
+              </div>
+          
+              <div id="context" class="link-container">
+                <a href="https://arxiv.org/abs/2004.05150" target="_blank">Longformer: The Long-Document Transformer — Beltagy et al.</a><br>
+                <a href="https://aclanthology.org/P18-1034/" target="_blank">Hierarchical Attention Networks — Yang et al.</a>
+                <p class="addition">Building on this, a potential academic project could explore hierarchical BERT models that chunk and encode long documents, then reassemble the segments using a global attention layer. This would allow BERT to tackle full-length articles or reports, a clear step forward from its sentence-level focus.</p>
+              </div>
+              <div id="multimodal" class="link-container">
+                <a href="https://arxiv.org/abs/1908.02265" target="_blank">ViLBERT — Lu et al.</a><br>
+                <a href="https://arxiv.org/abs/1908.07490" target="_blank">LXMERT — Tan and Bansal</a>
+                <p class="addition">This opens doors to BERT-inspired models that process visual and auditory data alongside text. A promising research direction would be developing a unified encoder that captures cross-modal alignments for applications like image captioning or video Q&A.</p>
+
+              </div>
+              <div id="efficient" class="link-container">
+                <a href="https://arxiv.org/abs/1905.11946" target="_blank">DistilBERT — Sanh et al.</a><br>
+                <a href="https://arxiv.org/abs/2002.08258" target="_blank">TinyBERT — Jiao et al.</a>
+                <p class="addition">Inspired by these works, a natural academic project would involve optimizing BERT through distillation, quantization, and pruning techniques for low-resource environments like smartphones or edge devices—where speed and memory matter most.</p>
+
+              </div>
+              <div id="crosslang" class="link-container">
+                <a href="https://arxiv.org/abs/1901.07291" target="_blank">mBERT</a><br>
+                <a href="https://arxiv.org/abs/2004.11867" target="_blank">XLM-R — Conneau et al.</a>
+                <p class="addition">This motivates future research into multilingual BERT models trained using meta-learning techniques to better generalize in low-resource language settings, especially for zero-shot translation and semantic understanding.</p>
+
+              </div>
+              <div id="ethics" class="link-container">
+                <a href="https://arxiv.org/abs/1906.08935" target="_blank">Interpretability in Transformers</a><br>
+                <a href="https://arxiv.org/abs/2103.03453" target="_blank">Bias in NLP Models</a>
+                <p class="addition">Given the societal impact of large language models, an important academic extension would be to explore how interpretability tools and fairness-aware training strategies can reduce bias in BERT's predictions and make its decisions more transparent.</p>
+
+              </div>
             </div>
     
-            <!-- Research Text Below Yellow Box -->
+            
             <div class="research-text">
                 <p><strong>Expanding BERT's Context Window:</strong> While BERT is effective at understanding sentence-level context, future research could explore expanding its context window to handle entire documents. A modified model could incorporate hierarchical attention mechanisms to capture broader textual dependencies.</p>
     
@@ -230,14 +257,16 @@
             </div>
     
     </div>
-    </section>
+  </section>
 
     <section id="reviewers" class="review-section">
         <div class="container">
           <h2 class="section-title"> Reviewer Panel</h2>
           <div class="review-score">
             <h3> Overall Score: <span class="score">8/10</span></h3>
-            <p class="score-justification">Groundbreaking work with long-lasting impact on NLP. Minor limitations in interpretability and efficiency, but overall a solid, well-executed contribution to the field.</p>
+            <p class="score-justification">    This paper was evaluated based on novelty, technical depth, clarity of presentation, and empirical results.
+              We considered how the proposed model improves state-of-the-art NLP systems, its methodological soundness,
+              reproducibility, and the broader impact on the research community. Groundbreaking work with long-lasting impact on NLP. Minor limitations in interpretability and efficiency, but overall a solid, well-executed contribution to the field.</p>
           </div>
       
           <div class="review-card strength">
@@ -248,6 +277,11 @@
               <li>Effectively leverages Masked Language Modeling and Next Sentence Prediction tasks.</li>
               <li>Open-sourced model and code, enhancing reproducibility and community adoption.</li>
             </ul>
+          </div>
+
+          <div class="berty-avatar">
+            <img src="images/berty.png" alt="Berty the AI Reviewer analyzing paper">
+            <div class="speech-bubble">“Hmm... Language Understood Deeply: The BERT Blueprint👀”</div>
           </div>
       
           <div class="review-card weakness">
@@ -260,16 +294,6 @@
             </ul>
           </div>
       
-          <div class="review-card suggestions">
-            <h3> Suggestions for Improvement</h3>
-            <ul>
-              <li>Replace NSP with more effective objectives like Sentence Order Prediction (SOP).</li>
-              <li>Incorporate better interpretability tools or analysis of learned representations.</li>
-              <li>Explore multilingual and domain-adapted pre-training setups.</li>
-              <li>Optimize BERT for smaller models (already explored later by DistilBERT, TinyBERT).</li>
-            </ul>
-          </div>
-      
           
         </div>
       </section>
@@ -278,14 +302,15 @@
     
     <section id="contact" class="content-section">
         <div class="container">
-            <h2>Contact Us</h2>
-            <p>Reach out for more details.</p>
+            
         </div>
     </section>
     
     <footer>
         <div class="container">
-            <p>&copy; 2025 Research Project. All rights reserved.</p>
+            <h2>Contact Us</h2>
+            <p>barukula.s@northeastern.edu | altaf.u@northeastern.edu </p>
+            <p> CS 7150 Spring 2025 Research Project. &copy; All rights reserved.</p>
         </div>
     </footer>
 </body>
